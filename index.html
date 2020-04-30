@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VueJS Tutorials</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 </head>
 <body>
-  
+    <div id="vue-app">
+        <h1>Name: {{ name }}</h1>
+        <h2>Job: {{ job }}</h2>
+        <h3>Greet: {{ greet('Abend') }}</h3>
+        <h4><a :href="website" target="_blank">Website</a></h4>
+        <h4><a v-bind:href="website" target="_blank">Website</a></h4>
+        <input type="text" :value="name" />
+        <p v-html="websiteTag"></p>
+    </div>
+    <div id="vue-events">
+        <h1>Vue Events</h1>
+        <button @click="plus(2)">Add a Year</button>
+        <button @click="minus(2)">Subtract a Year</button>
+        <p>My age is {{ age }}</p>
+        <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
