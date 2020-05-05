@@ -31,6 +31,60 @@ new Vue({
         updateXY: function(e){
             this.x = e.offsetX;
             this.y = e.offsetY;
+        },
+        click: function(){
+            alert('hoppla!');
         }
     }
-})
+});
+
+new Vue ({
+    el: '#keyboard-events',
+    data: {
+        keyboardName: '',
+        keyboardAge:''
+    },
+    methods: {
+        logName: function(){
+            console.log('you entered your name');
+        },
+        logAge: function(){
+            console.log('you entered your age');
+        }
+    }
+});
+
+new Vue({
+    el: '#computed',
+    data: {
+        age: 33,
+        a: 0,
+        b: 0,
+    },
+    methods: {
+        /*addToA: function(){return this.age + this.a;},
+        addToB: function(){return this.age + this.b;}*/
+    },
+    computed: {
+        addToA: function(){console.log('addToA');return this.age + this.a;},
+        addToB: function(){console.log('addToB');return this.age + this.b;}
+    }
+});
+
+new Vue({
+    el: '#dyncss',
+    data: {
+        available: false,
+        nearby: false
+    },
+    methods: {},
+    computed: {
+        compClasses: function(){
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
+
+        }
+    }
+});
