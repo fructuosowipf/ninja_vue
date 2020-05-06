@@ -1,3 +1,8 @@
+body{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 #canvas{
     width: 600px;
     padding: 200px 20px;

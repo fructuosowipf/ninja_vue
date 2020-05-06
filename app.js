@@ -88,3 +88,18 @@ new Vue({
         }
     }
 });
+
+new Vue({
+    el: '#conditionals',
+    data: {
+        error: false,
+        success: false
+
+    },
+    methods: {
+
+    },
+    computed: {
+
+    }
+})

@@ -57,6 +57,17 @@
             <span>Tiago</span>
         </div>
     </div>
+    <div id="conditionals">
+        <h1>Conditionals</h1>
+        <button @click="error = !error">Toggle Error</button>
+        <button @click="success = !success">Toggle Success</button>
+        <!-- <p v-if="error">There has been an error</p>
+        <p v-else-if="success">There has been an success</p> -->
+        <p v-show="error">There has been an error</p>
+        <p v-show="success">Whooooo success!! :-)</p>
+    </div>
+
+
     <script src="app.js"></script>
 </body>
 </html>
