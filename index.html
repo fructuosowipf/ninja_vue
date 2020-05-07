@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VueJS Tutorials</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+        integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 </head>
+
 <body>
     <div id="vue-app">
         <h1>Name: {{ name }}</h1>
@@ -53,7 +56,7 @@
         <h2>Example 2</h2>
         <div v-bind:class="compClasses">
             <button @click="nearby = !nearby">Toggle nearby</button>
-            <button @click="available = !available" >Toggle Availability</button>
+            <button @click="available = !available">Toggle Availability</button>
             <span>Tiago</span>
         </div>
     </div>
@@ -83,25 +86,26 @@
 
         <h2>Ninjas with Template</h2>
         <div class="template">
-        <template v-for="(ninja, index) in ninjas">
-            <h4>{{ index }}</h4>
-            <p>Name: {{ ninja.name }}</p>
-            <p>Age: {{ ninja.age }}</p>
-        </template>
-    </div>
+            <template v-for="(ninja, index) in ninjas">
+                <h4>{{ index }}</h4>
+                <p>Name: {{ ninja.name }}</p>
+                <p>Age: {{ ninja.age }}</p>
+            </template>
+        </div>
 
-    <h2>Ninjas with Object Loop</h2>
-    <div class="objectloop">
+        <h2>Ninjas with Object Loop</h2>
+        <div class="objectloop">
             <template v-for="ninja in ninjas">
                 <div v-for="(val,key) in ninja">
                     <p>{{ key }}: {{ val }}</p>
                 </div>
             </template>
-    </div>
+        </div>
 
     </div>
 
 
     <script src="app.js"></script>
 </body>
+
 </html>
