@@ -27,3 +27,33 @@ span{
     content: "nearby";
     margin-left: 10px;
 }
+
+#bag {
+    width: 200px;
+    height: 500px;
+    margin: 0 auto;
+    background: url('img/bag.png') center no-repeat;
+    background-size: 80%;
+}
+
+.burst {
+    background: url('img/bag-burst.png') center no-repeat !important;
+    background-size: 80%!important;
+}
+
+#bag-health {
+    width: 200px;
+    border: 2px solid black;
+    margin: 0 auto 20px auto;
+}
+
+#bag-health div {
+    height: 20px;
+    background: crimson;
+}
+
+#controls {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
