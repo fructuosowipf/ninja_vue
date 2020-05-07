@@ -69,7 +69,36 @@
 
     <div id="v-for">
         <h1>Looping through lists</h1>
-        
+
+        <h2>Characters</h2>
+        <ul>
+            <li v-for="(character, index) in characters">{{ index }}. {{ character }}</li>
+        </ul>
+
+        <h2>Ninjas</h2>
+
+        <ul>
+            <li v-for="(ninja, index) in ninjas">{{ index }}. {{ ninja.name }} - {{ ninja.age }}</li>
+        </ul>
+
+        <h2>Ninjas with Template</h2>
+        <div class="template">
+        <template v-for="(ninja, index) in ninjas">
+            <h4>{{ index }}</h4>
+            <p>Name: {{ ninja.name }}</p>
+            <p>Age: {{ ninja.age }}</p>
+        </template>
+    </div>
+
+    <h2>Ninjas with Object Loop</h2>
+    <div class="objectloop">
+            <template v-for="ninja in ninjas">
+                <div v-for="(val,key) in ninja">
+                    <p>{{ key }}: {{ val }}</p>
+                </div>
+            </template>
+    </div>
+
     </div>
 
 
