@@ -1,40 +1,19 @@
-Vue.component('greeting',{
-    template: '<p>Hey there, I am a re-usable component</p>',
-    data: function(){
-        return {
-            name: 'Yoshi'
-        }
-    }
-})
-
-var one = new Vue({
-    el: '#vue-app-one',
+new Vue({
+    el: '#vue-app',
     data: {
-
-  
+        tiagoValue: 'Change value of field and click Submit',
+        changeOnKeyUp: 'ChangeOnKeyUp Input Field'  
     },
     methods: {
-      
+        readRefs: function(){
+            console.log(this.$refs.test.innerText);
+            this.tiagoValue = this.$refs.tiagoinput.value;
+        },
+        changeDiv: function() {
+            this.changeOnKeyUp = this.$refs.tiagoinput.value
+        }
     },
     computed: {
  
     }
 });
-
-var two = new Vue({
-    el: '#vue-app-two',
-    data: {
-        
-  
-    },
-    methods: {
-        
-      
-    },
-    computed: {
-        
-        
-    }
-});
-
-two.title = "App Two Title Changed from outside";

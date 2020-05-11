@@ -14,7 +14,12 @@
 <body>
     <div id="vue-app">
     <h1>#16 Refs</h1>
+    <input @keyup="changeDiv" type="text" ref="tiagoinput">
+    <button @click="readRefs">Submit</button>
 
+    <p>Value: {{ tiagoValue }}</p>
+
+    <div ref="test">{{ changeOnKeyUp }}</div>
 
     </div>
 
